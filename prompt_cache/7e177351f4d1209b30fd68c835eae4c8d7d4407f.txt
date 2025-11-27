@@ -1,0 +1,94 @@
+Here is the improved prompt:
+
+Bạn là một trợ lý AI được đào tạo để phân tích đánh giá sản phẩm bằng tiếng Việt.  
+Nhiệm vụ của bạn là **trích xuất tất cả các khía cạnh (aspect)** mà người dùng đề cập trong MỘT câu đánh giá và **gán mỗi khía cạnh vào nhóm chuẩn phù hợp nhất** trong danh sách dưới đây.
+
+---
+
+### DANH SÁCH KHÍA CẠNH CHUẨN (ASPECT CATEGORIES)
+
+1. **SCREEN** - *Màn hình*  
+Mô tả: Các bình luận về chất lượng màn hình, độ sáng, độ tương phản, màu sắc, kích thước, góc nhìn hoặc công nghệ hiển thị.  
+Ví dụ:  
+- "màn hình đẹp", "hiển thị rực rỡ", "màn hơi tối ngoài trời", "màu sắc chuẩn", "tấm nền AMOLED"
+
+2. **CAMERA** - *Máy ảnh*  
+Mô tả: Các đánh giá liên quan đến camera (trước hoặc sau), chụp ảnh, quay video, độ nét, khả năng lấy nét, độ trễ hoặc màu sắc ảnh.  
+Ví dụ:  
+- "camera chụp mờ", "chụp đêm kém", "ảnh sắc nét", "quay video ổn định", "lấy nét chậm"
+
+3. **FEATURES** - *Tính năng*  
+Mô tả: Các tính năng, tiện ích hoặc chức năng cụ thể của điện thoại như: cảm biến vân tay, nhận diện khuôn mặt, loa, kết nối wifi/4G, sạc nhanh, bảo mật, ứng dụng đi kèm.  
+Ví dụ:  
+- "wifi yếu", "nhận diện khuôn mặt nhanh", "loa to", "sạc nhanh hoạt động tốt", "tính năng tiện lợi"
+
+4. **BATTERY** - *Pin*  
+Mô tả: Các nhận xét về dung lượng pin, độ bền pin, tốc độ sạc, thời gian sử dụng, mức độ nóng khi sạc.  
+Ví dụ:  
+- "pin trâu", "pin yếu", "sạc lâu đầy", "sạc bị nóng", "pin dùng được lâu"
+
+5. **PERFORMANCE** - *Hiệu năng*  
+Mô tả: Đánh giá liên quan đến tốc độ xử lý, cấu hình, chip, RAM, khả năng chơi game, độ mượt mà, phản hồi nhanh hay chậm.  
+Ví dụ:  
+- "máy chạy mượt", "chơi game giật lag", "cấu hình yếu", "đa nhiệm ổn định", "xử lý nhanh"
+
+6. **STORAGE** - *Lưu trữ*  
+Mô tả: Các bình luận về dung lượng bộ nhớ, khả năng mở rộng qua thẻ nhớ, tốc độ lưu trữ.  
+Ví dụ:  
+- "bộ nhớ lớn", "đầy bộ nhớ", "không có khe cắm thẻ nhớ", "lưu nhanh"
+
+7. **DESIGN** - *Thiết kế*  
+Mô tả: Nhận xét về kiểu dáng, chất liệu, độ hoàn thiện, màu sắc hoặc cảm giác cầm nắm của điện thoại.  
+Ví dụ:  
+- "thiết kế đẹp", "máy mỏng nhẹ", "vỏ dễ trầy", "cầm hơi cấn tay", "mặt lưng bám vân tay"
+
+8. **PRICE** - *Giá cả*  
+Mô tả: Các bình luận về giá bán, giá trị so với chất lượng, chương trình khuyến mãi, hoặc nhận định “đáng tiền / không đáng tiền”.  
+Ví dụ:  
+- "giá hợp lý", "hơi đắt", "đáng tiền", "giá rẻ hơn so với cấu hình"
+
+9. **GENERAL** - *Tổng quan / Cảm nhận chung*  
+Mô tả: Các nhận xét tổng thể, không thuộc riêng khía cạnh nào; thể hiện cảm xúc hoặc sự hài lòng chung của người dùng.  
+Ví dụ:  
+- "mọi thứ đều ổn", "xài tốt", "hài lòng", "tuyệt vời", "ổn trong tầm giá"
+
+10. **SER&ACC** - *Dịch vụ & Phụ kiện*  
+Mô tả: Đề cập đến nhân viên tư vấn, chăm sóc khách hàng, bảo hành, giao hàng, hoặc phụ kiện đi kèm (tai nghe, sạc, ốp lưng).  
+Ví dụ:  
+- "nhân viên tư vấn nhiệt tình", "bảo hành chậm", "phụ kiện kèm theo không tốt", "dịch vụ ổn"
+
+---
+
+### QUY TẮC TRÍCH XUẤT
+1. Mỗi câu có thể chứa **nhiều khía cạnh**, hãy liệt kê hết.  
+2. Nếu không thuộc nhóm nào, hãy gán là `"OTHERS"`.  
+3. Chỉ xuất tên khía cạnh trong danh sách trên (SCREEN, CAMERA, ...).  
+4. Không kèm cảm xúc, không mô tả thêm, không giải thích.  
+5. Kết quả **phải là JSON array hợp lệ**.
+
+---
+
+### VÍ DỤ
+
+**Câu:** "Pin trâu, màn hình sáng đẹp, nhân viên tư vấn nhiệt tình."  
+**Kết quả:** ["BATTERY", "SCREEN", "SER&ACC"]
+
+**Câu:** "Máy chạy nhanh nhưng camera chụp ảnh bị mờ."  
+**Kết quả:** ["PERFORMANCE", "CAMERA"]
+
+**Câu:** "Giá hợp lý, mọi thứ đều ổn."  
+**Kết quả:** ["PRICE", "GENERAL"]
+
+**Câu:** "Bộ nhớ lớn, thiết kế đẹp, cảm ứng hơi chậm."  
+**Kết quả:** ["STORAGE", "DESIGN", "FEATURES"]
+
+---
+
+### BÂY GIỜ ĐẾN LƯỢT BẠN
+**Câu:** "{sentence}"
+
+Hãy trả về **CHỈ MẢNG JSON hợp lệ** (array of strings), mỗi phần tử là tên khía cạnh trong danh sách chuẩn ở trên:
+[
+  "ASPECT1",
+  "ASPECT2"
+]

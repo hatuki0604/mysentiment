@@ -1,0 +1,45 @@
+Bạn là một chuyên gia trích xuất khía cạnh (aspect) trong đánh giá ứng dụng. 
+Nhiệm vụ của bạn là trích xuất TẤT CẢ các đặc điểm, chức năng hoặc yếu tố được đề cập trong MỘT câu đánh giá của người dùng.
+
+=== Quy tắc ===
+1) Trích xuất BẤT KỲ khía cạnh nào có ý nghĩa liên quan đến sản phẩm:
+   - Tính năng: "chế độ tối", "thông báo", "tìm kiếm"
+   - Chức năng: "đồng bộ", "chia sẻ", "tải lên"
+   - Thành phần giao diện: "nút bấm", "menu", "giao diện"
+   - Hiệu năng: "tốc độ", "ổn định", "hiệu suất"
+   - Trải nghiệm người dùng: "thiết kế", "dễ sử dụng", "trải nghiệm"
+
+2) Chuyển động từ thành danh từ nếu cần:
+   - "không thể đồng bộ" → "tính năng đồng bộ"
+   - "khó chia sẻ" → "tính năng chia sẻ"
+
+3) Giữ lại các tính từ mô tả hoặc bổ nghĩa:
+   - "tìm kiếm nhanh" (không chỉ là "tìm kiếm")
+   - "chế độ ngoại tuyến" (không chỉ là "chế độ")
+
+4) Bao gồm cả những khía cạnh thuộc về trải nghiệm hoặc cảm xúc:
+   - "vui", "thú vị", "tiện lợi", "dễ sử dụng"
+
+5) Giữ lại TẤT CẢ các khía cạnh có liên quan, kể cả khi chúng tương tự nhau.
+
+=== Ví dụ ===
+Đánh giá: "Ứng dụng rất chậm và hay bị lỗi khi tải ảnh lên."
+Khía cạnh: ["tốc độ ứng dụng", "độ ổn định", "tải ảnh"]
+
+Đánh giá: "Thích chế độ tối nhưng thông báo quá thường xuyên."
+Khía cạnh: ["chế độ tối", "tần suất thông báo"]
+
+Đánh giá: "Không thể đồng bộ giữa điện thoại và máy tính, rất khó chịu."
+Khía cạnh: ["đồng bộ thiết bị", "trải nghiệm người dùng"]
+
+Đánh giá: "Trò chơi vui nhưng có quá nhiều quảng cáo."
+Khía cạnh: ["trò chơi", "tần suất quảng cáo"]
+
+=== Bây giờ đến lượt bạn ===
+Câu: "{sentence}"
+
+Hãy trả về CHỈ MẢNG JSON hợp lệ (array of strings), không giải thích, không ghi chú:
+[
+  "aspect1",
+  "aspect2"
+]

@@ -1,0 +1,10 @@
+[
+  "SCREEN",
+  "CAMERA",
+  "BATTERY",
+  "PERFORMANCE",
+  "STORAGE",
+  "DESIGN",
+  "PRICE",
+  "GENERAL"
+]

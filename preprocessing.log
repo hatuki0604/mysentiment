@@ -1,0 +1,334 @@
+2025-11-07 11:29:52,157 - INFO - Processing uit...
+2025-11-07 11:29:52,194 - INFO - No ID column found; using row index as review_id
+2025-11-07 11:29:52,270 - INFO - Skipping language filter for language=vi
+2025-11-07 11:29:52,276 - INFO - 
+        Source: uit
+        Initial reviews: 7786
+        After language filtering: N/A
+        Final reviews: 7784
+        Removed: 2
+    
+2025-11-07 11:29:52,326 - INFO - Successfully processed and saved uit: 7784 reviews
+2025-11-14 02:01:33,688 - INFO - Processing uit...
+2025-11-14 02:01:33,708 - INFO - No ID column found; using row index as review_id
+2025-11-14 02:01:33,735 - INFO - Skipping language filter for language=vi
+2025-11-14 02:01:33,739 - INFO - 
+        Source: uit
+        Initial reviews: 2224
+        After language filtering: N/A
+        Final reviews: 2224
+        Removed: 0
+    
+2025-11-14 02:01:33,756 - INFO - Successfully processed and saved uit: 2224 reviews
+2025-11-17 23:15:40,839 - INFO - Processing uit-all...
+2025-11-17 23:15:40,887 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:15:40,992 - INFO - Skipping language filter for language=vi
+2025-11-17 23:15:41,001 - INFO - 
+        Source: uit-all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 14
+    
+2025-11-17 23:15:41,003 - ERROR - Error processing uit-all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:15:41,005 - ERROR - No datasets were successfully processed
+2025-11-17 23:15:54,303 - INFO - Processing uit-all...
+2025-11-17 23:15:54,349 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:15:54,466 - INFO - Skipping language filter for language=vi
+2025-11-17 23:15:54,479 - INFO - 
+        Source: uit-all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 14
+    
+2025-11-17 23:15:54,482 - ERROR - Error processing uit-all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:15:54,487 - ERROR - No datasets were successfully processed
+2025-11-17 23:17:56,327 - INFO - Processing uit-all...
+2025-11-17 23:17:56,377 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:17:56,381 - INFO - Skipping language filter for language=vi
+2025-11-17 23:17:56,389 - INFO - 
+        Source: uit-all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11123
+        Removed: 1
+    
+2025-11-17 23:17:56,391 - ERROR - Error processing uit-all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:17:56,394 - ERROR - No datasets were successfully processed
+2025-11-17 23:19:19,519 - INFO - Processing uit_all...
+2025-11-17 23:19:19,574 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:19:19,579 - INFO - Skipping language filter for language=vi
+2025-11-17 23:19:19,589 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11123
+        Removed: 1
+    
+2025-11-17 23:19:19,592 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:19:19,594 - ERROR - No datasets were successfully processed
+2025-11-17 23:20:34,114 - INFO - Processing uit_all...
+2025-11-17 23:20:34,170 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:20:34,175 - INFO - Skipping language filter for language=vi
+2025-11-17 23:20:34,186 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11123
+        Removed: 1
+    
+2025-11-17 23:20:34,188 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:20:34,190 - ERROR - No datasets were successfully processed
+2025-11-17 23:20:40,549 - INFO - Processing uit...
+2025-11-17 23:20:40,571 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:20:40,573 - INFO - Skipping language filter for language=vi
+2025-11-17 23:20:40,576 - INFO - 
+        Source: uit
+        Initial reviews: 2224
+        After language filtering: N/A
+        Final reviews: 2224
+        Removed: 0
+    
+2025-11-17 23:20:40,602 - INFO - Successfully processed and saved uit: 2224 reviews
+2025-11-17 23:21:50,339 - INFO - Processing uit_all...
+2025-11-17 23:21:50,392 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:21:50,400 - INFO - Skipping language filter for language=vi
+2025-11-17 23:21:50,420 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11123
+        Removed: 1
+    
+2025-11-17 23:21:50,422 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:21:50,425 - ERROR - No datasets were successfully processed
+2025-11-17 23:22:25,753 - INFO - Processing uit_all...
+2025-11-17 23:22:25,806 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:22:25,810 - INFO - Skipping language filter for language=vi
+2025-11-17 23:22:25,820 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11123
+        Removed: 1
+    
+2025-11-17 23:22:25,822 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 6).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:22:25,824 - ERROR - No datasets were successfully processed
+2025-11-17 23:25:33,490 - INFO - Processing uit_all...
+2025-11-17 23:25:33,540 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:25:33,643 - INFO - Skipping language filter for language=vi
+2025-11-17 23:25:33,651 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 14
+    
+2025-11-17 23:25:33,653 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:25:33,655 - ERROR - No datasets were successfully processed
+2025-11-17 23:26:19,900 - INFO - Processing uit_all...
+2025-11-17 23:26:19,952 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:26:20,058 - INFO - Skipping language filter for language=vi
+2025-11-17 23:26:20,067 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 14
+    
+2025-11-17 23:26:20,069 - ERROR - Error processing uit_all
+Traceback (most recent call last):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 325, in main
+    if validate_data(clean_df):
+  File "/Users/hatrungkien/my-sentiment/app_reviews_pipeline/preprocessing.py", line 225, in validate_data
+    "Valid ratings": (df["rating"].dropna().between(1, 5).all()) if "rating" in df.columns else True,
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 5657, in between
+    lmask = self >= left
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/common.py", line 76, in new_method
+    return method(self, other)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/arraylike.py", line 60, in __ge__
+    return self._cmp_method(other, operator.ge)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/series.py", line 6138, in _cmp_method
+    res_values = ops.comparison_op(lvalues, rvalues, op)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 344, in comparison_op
+    res_values = comp_method_OBJECT_ARRAY(op, lvalues, rvalues)
+  File "/Users/hatrungkien/.pyenv/versions/3.10.9/lib/python3.10/site-packages/pandas/core/ops/array_ops.py", line 129, in comp_method_OBJECT_ARRAY
+    result = libops.scalar_compare(x.ravel(), y, op)
+  File "pandas/_libs/ops.pyx", line 107, in pandas._libs.ops.scalar_compare
+TypeError: '>=' not supported between instances of 'str' and 'int'
+2025-11-17 23:26:20,071 - ERROR - No datasets were successfully processed
+2025-11-17 23:27:09,402 - INFO - Processing uit_all...
+2025-11-17 23:27:09,451 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:27:09,556 - INFO - Skipping language filter for language=vi
+2025-11-17 23:27:09,564 - INFO - 
+        Source: uit_all
+        Initial reviews: 11124
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 14
+    
+2025-11-17 23:27:09,641 - INFO - Successfully processed and saved uit_all: 11110 reviews
+2025-11-17 23:52:02,225 - INFO - Processing uit_all...
+2025-11-17 23:52:02,288 - INFO - No ID column found; using row index as review_id
+2025-11-17 23:52:02,473 - INFO - Skipping language filter for language=vi
+2025-11-17 23:52:02,483 - INFO - 
+        Source: uit_all
+        Initial reviews: 20024
+        After language filtering: N/A
+        Final reviews: 11110
+        Removed: 8914
+    
+2025-11-17 23:52:02,557 - INFO - Successfully processed and saved uit_all: 11110 reviews

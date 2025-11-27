@@ -1,0 +1,15 @@
+aspect,mentions,Positive,Negative,Neutral,positivity_pct
+battery,1095,590,408,78,0.548
+performance,1050,548,442,55,0.524
+general,858,712,95,40,0.841
+features,656,150,472,22,0.233
+price,655,148,141,342,0.235
+camera,613,320,224,66,0.525
+design,578,395,125,30,0.718
+ser&acc,288,219,54,0,0.802
+screen,243,128,108,7,0.527
+storage,168,45,26,38,0.413
+ram,3,1,2,0,0.333
+game,1,0,0,1,0.0
+security,1,0,1,0,0.0
+video,1,0,1,0,0.0

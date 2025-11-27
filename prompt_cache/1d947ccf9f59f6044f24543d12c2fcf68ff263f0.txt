@@ -1,0 +1,6 @@
+**Câu:** "{sentence}"
+
+**Kết quả:** [
+  "{ASPECT1}",
+  "{ASPECT2}"
+]

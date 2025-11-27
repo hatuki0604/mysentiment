@@ -1,0 +1,109 @@
+{
+  "aspect_detection": {
+    "subset_accuracy": 0.1485148514851485,
+    "micro": {
+      "precision": 0.688212927756654,
+      "recall": 0.6114864864864865,
+      "f1": 0.6475849731663685
+    },
+    "macro": {
+      "precision": 0.3175805416986618,
+      "recall": 0.2929586484659889,
+      "f1": 0.2890174424001362
+    },
+    "samples_f1": 0.5892146357492891,
+    "jaccard_samples": 0.4817185289957567,
+    "hamming_loss": 0.10265763418447107,
+    "labels": [
+      "battery",
+      "camera",
+      "charging_speed",
+      "chuyển từ bé màn hình lên full màn trong youtube",
+      "connectivity",
+      "design",
+      "features",
+      "general",
+      "không thể trích xuất khía cạnh từ câu đã cho vì câu này không rõ ràng và chứa nhiều từ không liên quan",
+      "loa",
+      "mong sớm sửa lỗi",
+      "performance",
+      "price",
+      "ram",
+      "ser&acc",
+      "setup",
+      "storage",
+      "video màu sắc nhợt nhạt",
+      "wifi"
+    ]
+  },
+  "pair_strict": {
+    "subset_accuracy": 0.0891089108910891,
+    "micro": {
+      "precision": 0.49429657794676807,
+      "recall": 0.4391891891891892,
+      "f1": 0.46511627906976744
+    },
+    "macro": {
+      "precision": 0.28877058112352233,
+      "recall": 0.2260431695214304,
+      "f1": 0.23187836628658642
+    },
+    "labels": [
+      "battery#Negative",
+      "battery#Neutral",
+      "battery#Positive",
+      "camera#Negative",
+      "camera#Neutral",
+      "camera#Positive",
+      "charging_speed#Positive",
+      "chuyển từ bé màn hình lên full màn trong youtube#Neutral",
+      "connectivity#Negative",
+      "design#Negative",
+      "design#Neutral",
+      "design#Positive",
+      "features#Negative",
+      "features#Neutral",
+      "features#Positive",
+      "general#Negative",
+      "general#Neutral",
+      "general#Positive",
+      "không thể trích xuất khía cạnh từ câu đã cho vì câu này không rõ ràng và chứa nhiều từ không liên quan#Neutral",
+      "loa#Positive",
+      "mong sớm sửa lỗi#Positive",
+      "performance#Negative",
+      "performance#Neutral",
+      "performance#Positive",
+      "price#Negative",
+      "price#Neutral",
+      "price#Positive",
+      "ram#Neutral",
+      "ser&acc#Negative",
+      "ser&acc#Neutral",
+      "ser&acc#Positive",
+      "setup#Neutral",
+      "storage#Neutral",
+      "storage#Positive",
+      "video màu sắc nhợt nhạt#Negative",
+      "wifi#Negative",
+      "wifi#Neutral"
+    ]
+  },
+  "asc_at_gold": {
+    "accuracy": 0.4391891891891892,
+    "micro": {
+      "precision": 0.7182320441988951,
+      "recall": 0.4391891891891892,
+      "f1": 0.5450733752620545
+    },
+    "macro": {
+      "precision": 0.5721747388414055,
+      "recall": 0.3335402184707051,
+      "f1": 0.4190075315561212
+    },
+    "weighted": {
+      "precision": 0.7356972356972358,
+      "recall": 0.4391891891891892,
+      "f1": 0.5470928679639933
+    }
+  }
+}
