@@ -1,0 +1,19 @@
+{
+  "output_a_scores": {
+    "accuracy": 5,
+    "completeness": 4,
+    "conciseness": 6,
+    "format": 5,
+    "domain_relevance": 4
+  },
+  "output_b_scores": {
+    "accuracy": 9,
+    "completeness": 8,
+    "conciseness": 9,
+    "format": 9,
+    "domain_relevance": 8
+  },
+  "explanation": "Output B cung c\u1ea5p th\u00f4ng tin ch\u00ednh x\u00e1c v\u00e0 \u0111\u1ea7y \u0111\u1ee7 h\u01a1n, \u0111\u1ed3ng th\u1eddi tu\u00e2n th\u1ee7 \u0111\u1ecbnh d\u1ea1ng t\u1ed1t h\u01a1n.",
+  "recommendation": "b",
+  "confidence": 0.9
+}

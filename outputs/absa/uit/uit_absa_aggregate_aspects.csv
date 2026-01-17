@@ -1,0 +1,11 @@
+aspect,mentions,Positive,Negative,Neutral,positivity_pct
+battery,5,2,2,1,0.4
+camera,2,1,1,0,0.5
+design,1,1,0,0,1.0
+features,3,1,1,1,0.333
+general,6,5,1,0,0.833
+performance,5,3,2,0,0.6
+price,2,2,0,0,1.0
+screen,3,2,1,0,0.667
+ser&acc,2,2,0,0,1.0
+storage,1,1,0,0,1.0

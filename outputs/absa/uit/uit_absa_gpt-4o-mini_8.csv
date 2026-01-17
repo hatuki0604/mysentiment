@@ -1,0 +1,9 @@
+review_id,sent_idx,sentence,aspects,sentiments
+96,0,"Sản phẩm tốt, nhưng pin không trâu như mình nghĩ...xài cả ngày 2,3 tiếng chỉ lướt fb mà pin tuột quá mau","['general', 'battery']","{'general': 'Positive', 'battery': 'Negative'}"
+1401,0,Hàng chất lượng sai rất ok cho thế giới đi đông 5 sao .Mình mua hơn 4 tháng mà thấy rất tuyệt vời thanks nhà bạn hàng số 1 Viêt Năm.,['general'],{'general': 'Positive'}
+1995,0,E mới mưa đc 2 tháng.,['others'],{'others': 'Neutral'}
+1995,1,"Mà e mới cập nhật phiên bản miui mới nhất  , e sử dụng thấy nó tụt pin nhanh quá.",['battery'],{'battery': 'Negative'}
+1995,2,Mún xuống lại bản cập nhật cũ thì làm sao ạ,['others'],{'others': 'Neutral'}
+1987,0,Mới mua hôm nay giao hàng ngay hôm nay rất nhanh :)) Hàng đã sài tc r giờ sài tiếp nói chung em này quá oke rồi  .,"['general', 'ser&acc']","{'general': 'Positive', 'ser&acc': 'Positive'}"
+1987,1,"quá ok với giá tiền , thanks shop .","['price', 'general']","{'price': 'Positive', 'general': 'Positive'}"
+859,0,Sao máy lúc nào cũng nóng vậy nhỉ mk có để treo zallo messager rồi xem Youtube mà đã lên 41 độ ui,"['performance', 'battery']","{'performance': 'Negative', 'battery': 'Neutral'}"

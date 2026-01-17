@@ -6,26 +6,16 @@ import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
-
-# ===========================
-# Fix import path
-# ===========================
 import sys
-from pathlib import Path
+import os
 
-HERE = Path(__file__).resolve()
-PKG_ROOT = HERE.parents[0]
+# Ensure the parent directory is in the Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-if str(PKG_ROOT) not in sys.path:
-    sys.path.insert(0, str(PKG_ROOT))
-
-
-# ===========================
-# Load modules nội bộ
-# ===========================
+# Correct import path
+from app_reviews_pipeline.M4_Rag_qa.rag_prompt import PROMPT_TEMPLATE
 from app_reviews_pipeline.user_selection import choose_dataset
 from app_reviews_pipeline.llm_config import get_llm
-from app_reviews_pipeline.M4_Rag_qa.rag_prompt import PROMPT_TEMPLATE
 from app_reviews_pipeline.M4_Rag_qa.rag_qa import (
     retrieve_top_k,
     generate_answer,
@@ -51,7 +41,6 @@ st.title("📘 RAG QA – Q&A Interface")
 # ===========================
 # Step 1: Load Dataset Info
 # ===========================
-st.header("1️⃣ Chọn dataset")
 
 ds, csv_path, topic = choose_dataset()
 
@@ -65,8 +54,6 @@ key_prefix = None
 # ===========================
 # Step 2: Chọn provider/model
 # ===========================
-st.header("2️⃣ Chọn Provider & Model")
-
 provider = st.selectbox("Provider", ["openai", "azure"], index=0)
 model = st.text_input("Model name", "gpt-4o-mini")
 
@@ -76,8 +63,6 @@ chat_fn = get_llm(provider, model)
 # ===========================
 # Step 3: Load RAG Cache
 # ===========================
-st.header("3️⃣ Load FAISS Index (từ lần chạy RAG ở terminal)")
-
 key_prefix = f"{ds}__all-mpnet-base-v2__{provider}__{sanitize(model)}"
 bundle_dir = os.path.join(CACHE_DIR, key_prefix)
 

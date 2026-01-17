@@ -1,0 +1,10 @@
+{"review_id": "r-57908318", "sent_idx": 0, "sentence": "Thay đổi hình nền từ điện thoại được k", "aspects": ["others"], "sentiments": {"others": "Neutral"}}
+{"review_id": "r-58384931", "sent_idx": 0, "sentence": "Mới mua hôm qua sáng đọc báo thấy pin này bị thu hồi do lỗi bên Trung Quốc. Muốn đổi sp khác cho yên tâm được không ạ", "aspects": ["battery", "general"], "sentiments": {"battery": "Negative", "general": "Negative"}}
+{"review_id": "r-58388336", "sent_idx": 0, "sentence": "Mua được 1 tháng rùi. Ổn trong tầm giá pin trâu", "aspects": ["general", "battery"], "sentiments": {"general": "Positive", "battery": "Positive"}}
+{"review_id": "r-57430715", "sent_idx": 0, "sentence": "Chán thật, 1 ngày tự reset mấy lần", "aspects": ["others"], "sentiments": {"others": "Negative"}}
+{"review_id": "r-57885201", "sent_idx": 0, "sentence": "Sạc dự phòng sạc không vô pin", "aspects": ["features", "battery"], "sentiments": {"features": "Negative", "battery": "Negative"}}
+{"review_id": "r-58690417", "sent_idx": 0, "sentence": "Mới mua về sạc thử mà 12 phút lên được 3% pin. Để theo dõi thêm 12 ngày nữa nếu vẫn vậy thì đi bảo hành thôi", "aspects": ["battery", "ser&acc"], "sentiments": {"battery": "Negative", "ser&acc": "Neutral"}}
+{"review_id": "r-57903266", "sent_idx": 0, "sentence": "Bán hàng lỗi không dùng được không gọi đi hay gọi đến được mà trả hàng mất phí 10%.", "aspects": ["ser&acc", "others"], "sentiments": {"ser&acc": "Negative", "others": "Negative"}}
+{"review_id": "r-57012128", "sent_idx": 0, "sentence": "Khi mua tôi nói rõ nhu cầu nghe fm, khi đem về sử dụng nghe chỉ được 1 đài, pin tuột rất nhanh dù không dùng, rất không hài lòng về sản phẩm và tư vấn bán hàng", "aspects": ["features", "battery", "general", "ser&acc"], "sentiments": {"features": "Negative", "battery": "Negative", "general": "Negative", "ser&acc": "Negative"}}
+{"review_id": "r-57273352", "sent_idx": 0, "sentence": "Máy dùng oke nhé", "aspects": ["general"], "sentiments": {"general": "Positive"}}
+{"review_id": "r-58271258", "sent_idx": 0, "sentence": "Giá quá cao", "aspects": ["price"], "sentiments": {"price": "Negative"}}

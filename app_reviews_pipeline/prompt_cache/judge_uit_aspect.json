@@ -1,0 +1,19 @@
+{
+  "output_a_scores": {
+    "accuracy": 7,
+    "completeness": 6,
+    "conciseness": 9,
+    "format": 7,
+    "domain_relevance": 6
+  },
+  "output_b_scores": {
+    "accuracy": 8,
+    "completeness": 7,
+    "conciseness": 9,
+    "format": 9,
+    "domain_relevance": 7
+  },
+  "explanation": "Output B c\u00f3 \u0111\u1ecbnh d\u1ea1ng r\u00f5 r\u00e0ng h\u01a1n v\u00e0 tu\u00e2n th\u1ee7 t\u1ed1t h\u01a1n c\u00e1c quy t\u1eafc \u0111\u1ecbnh d\u1ea1ng, \u0111\u1ed3ng th\u1eddi cung c\u1ea5p \u0111\u1ed9 ch\u00ednh x\u00e1c cao h\u01a1n.",
+  "recommendation": "b",
+  "confidence": 0.8
+}

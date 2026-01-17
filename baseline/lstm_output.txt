@@ -1,0 +1,31 @@
+LSTM baseline (PyTorch) - UIT-ViSFD
+Run time: 2026-01-17T21:55:14
+DATA_DIR: /Users/hatrungkien/my-sentiment/data/raw/UIT-ViSFD
+Device: mps
+Vocab: 15383 | SeqLen: 160 | Emb: 200
+BiLSTM hidden: 256 | layers: 1 | bidir: True | dropout: 0.3
+Pooling: max + mean | MLP hidden: 256
+Train: batch=64, epochs=8, lr=0.001
+Threshold tuning on Dev (grid).
+
+[Aspect Detection] best_thr=0.36 (best_dev_f1_on_grid=71.85%)
+Aspect Detection (Dev)
+Macro Precision: 70.89%
+Macro Recall:    73.21%
+Macro F1:        71.85%
+
+Aspect Detection (Test)
+Macro Precision: 71.50%
+Macro Recall:    72.81%
+Macro F1:        72.06%
+
+[Sentiment Detection (ASPECT#POLARITY)] best_thr=0.18 (best_dev_f1_on_grid=44.13%)
+Sentiment Detection (Dev) [ASPECT#POLARITY]
+Macro Precision: 40.20%
+Macro Recall:    53.70%
+Macro F1:        44.13%
+
+Sentiment Detection (Test) [ASPECT#POLARITY]
+Macro Precision: 39.97%
+Macro Recall:    53.61%
+Macro F1:        44.05%

@@ -1,0 +1,27 @@
+SVM baseline (DEFAULT predict) - UIT-ViSFD
+Run time: 2026-01-17T21:31:05
+DATA_DIR: /Users/hatrungkien/my-sentiment/data/raw/UIT-ViSFD
+Files: Train=Train.csv, Dev=Dev.csv, Test=Test.csv
+Vectorizer: TF-IDF ngram=(1, 2), max_features=50000
+Model: OneVsRest(LinearSVC(C=1.0, class_weight=None))
+Note: using model.predict() (no threshold tuning)
+
+Aspect Detection (Dev)
+Macro Precision: 81.55%
+Macro Recall:    70.75%
+Macro F1:        75.11%
+
+Aspect Detection (Test)
+Macro Precision: 84.91%
+Macro Recall:    71.29%
+Macro F1:        76.34%
+
+Sentiment Detection (Dev) [ASPECT#POLARITY]
+Macro Precision: 66.83%
+Macro Recall:    34.86%
+Macro F1:        39.86%
+
+Sentiment Detection (Test) [ASPECT#POLARITY]
+Macro Precision: 69.73%
+Macro Recall:    35.97%
+Macro F1:        42.48%

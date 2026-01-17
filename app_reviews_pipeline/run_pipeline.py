@@ -12,7 +12,7 @@ import traceback
 PIPELINE_ROOT = Path(__file__).resolve().parent
 if str(PIPELINE_ROOT) not in sys.path:
     sys.path.insert(0, str(PIPELINE_ROOT))
-for sub in ["M1_Discrepancy", "M2_Absa_recommendation", "M3_Topic_modeling", "M4_Rag_qa"]:
+for sub in ["M1_Discrepancy", "M2_Absa_recommendation", "M4_Rag_qa"]:
     p = PIPELINE_ROOT / sub
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
@@ -53,13 +53,10 @@ def run_module(choice: str):
     elif choice == "2":
         print("\n→ Running M2: ABSA + Recommendations …\n")
         run_absa()
-    # elif choice == "3":
-    #     print("\n→ Running M3: Topic Modeling …\n")
-    #     run_topic()
-    elif choice == "4":
+    elif choice == "3":
         print("\n→ Running M4: RAG QA …\n")
         run_rag()
-    elif choice == "5":
+    elif choice == "4":
         print("\n→ Running ALL with suggested pairings …\n")
         run_discrepancy()
         run_absa()

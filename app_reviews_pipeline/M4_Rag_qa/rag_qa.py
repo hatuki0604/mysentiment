@@ -110,7 +110,7 @@ def generate_answer(
     """
     # Build compact CONTEXT (≤15) with stable ids
     context_objs = []
-    for chunk, _score in retrieved[:30]:
+    for chunk, _score in retrieved[:15]:
         context_objs.append({
             "idx": str(chunk.get("review_id", "")),
             "text": str(chunk.get("text", "")).replace("\n", " ").strip(),
@@ -138,18 +138,21 @@ def main():
     # ===========================
     # Dataset Selection & Loading
     # ===========================
-    ds = "processed_tgdd_reviews"
-    csv_path = "/Users/hatrungkien/my-sentiment/data/processed/processed_tgdd_reviews.csv"
-    topic = "Đây là các reviews về điện thoại di động của Thế Giới Di Động"
-
+    ds, csv_path, topic = choose_dataset()
     base = pd.read_csv(csv_path, usecols=["review_id", "review_text"])
 
     # ===========================
     # Provider & Model Selection
     # ===========================
-    provider = "openai"
-    model = "gpt-4o-mini"
+    provider, model = choose_provider_and_model()
     chat_fn = get_llm(provider, model)
+
+    # ===========================
+    # Data Sampling
+    # ===========================
+    sample_n = choose_sample_size(len(base))
+    if sample_n:
+        base = base.sample(n=sample_n, random_state=42).reset_index(drop=True)
 
     # ===========================
     # Chunking & Embedding (Cache-Aware)

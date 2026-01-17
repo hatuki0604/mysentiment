@@ -1,0 +1,30 @@
+CNN baseline - UIT-ViSFD
+Run time: 2026-01-17T21:48:12
+DATA_DIR: /Users/hatrungkien/my-sentiment/data/raw/UIT-ViSFD
+Files: Train=Train.csv, Dev=Dev.csv, Test=Test.csv
+Vectorizer: Keras TextVectorization vocab=60000, seq_len=120
+Model: Emb(200) -> Conv1D(filters=256, k=3) -> GlobalMaxPool -> Dense(128) -> sigmoid
+Train: batch=64, epochs=10, lr=0.001, dropout=0.3
+Threshold tuning on Dev (grid).
+
+[Aspect Detection] best_thr=0.38 (best_dev_f1_on_grid=73.64%)
+Aspect Detection (Dev)
+Macro Precision: 70.79%
+Macro Recall:    76.95%
+Macro F1:        73.64%
+
+Aspect Detection (Test)
+Macro Precision: 72.00%
+Macro Recall:    76.76%
+Macro F1:        74.15%
+
+[Sentiment Detection (ASPECT#POLARITY)] best_thr=0.28 (best_dev_f1_on_grid=44.70%)
+Sentiment Detection (Dev) [ASPECT#POLARITY]
+Macro Precision: 42.17%
+Macro Recall:    52.14%
+Macro F1:        44.70%
+
+Sentiment Detection (Test) [ASPECT#POLARITY]
+Macro Precision: 42.73%
+Macro Recall:    52.23%
+Macro F1:        44.98%

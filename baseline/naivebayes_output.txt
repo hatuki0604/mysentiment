@@ -1,0 +1,29 @@
+Naive Bayes baseline - UIT-ViSFD
+Run time: 2026-01-17T21:25:03
+DATA_DIR: /Users/hatrungkien/my-sentiment/data/raw/UIT-ViSFD
+Files: Train=Train.csv, Dev=Dev.csv, Test=Test.csv
+Vectorizer: BoW (CountVectorizer) ngram=(1, 1)
+Model: OneVsRest(MultinomialNB(alpha=1.0))
+Threshold tuning on Dev grid: [0.05, 0.1, 0.15000000000000002, 0.2, 0.25, 0.3, 0.35000000000000003, 0.4, 0.45, 0.5]
+
+[Aspect Detection] best_thr=0.50 (best_dev_f1_on_grid=65.38%)
+Aspect Detection (Dev)
+Macro Precision: 65.45%
+Macro Recall:    66.07%
+Macro F1:        65.38%
+
+Aspect Detection (Test)
+Macro Precision: 65.87%
+Macro Recall:    64.79%
+Macro F1:        65.02%
+
+[Sentiment Detection (ASPECT#POLARITY)] best_thr=0.25 (best_dev_f1_on_grid=32.14%)
+Sentiment Detection (Dev) [ASPECT#POLARITY]
+Macro Precision: 30.57%
+Macro Recall:    36.32%
+Macro F1:        32.14%
+
+Sentiment Detection (Test) [ASPECT#POLARITY]
+Macro Precision: 33.31%
+Macro Recall:    37.13%
+Macro F1:        33.65%

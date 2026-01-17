@@ -1,0 +1,27 @@
+Random Forest baseline (DEFAULT predict) - UIT-ViSFD
+Run time: 2026-01-17T21:33:45
+DATA_DIR: /Users/hatrungkien/my-sentiment/data/raw/UIT-ViSFD
+Files: Train=Train.csv, Dev=Dev.csv, Test=Test.csv
+Vectorizer: BoW (CountVectorizer) ngram=(1, 1), max_features=None
+Model: OneVsRest(RandomForestClassifier(n_estimators=300, max_depth=None, min_samples_split=2, min_samples_leaf=1, random_state=42))
+Note: using model.predict() (no threshold tuning)
+
+Aspect Detection (Dev)
+Macro Precision: 78.33%
+Macro Recall:    61.80%
+Macro F1:        65.56%
+
+Aspect Detection (Test)
+Macro Precision: 78.05%
+Macro Recall:    60.90%
+Macro F1:        64.95%
+
+Sentiment Detection (Dev) [ASPECT#POLARITY]
+Macro Precision: 51.11%
+Macro Recall:    19.32%
+Macro F1:        24.65%
+
+Sentiment Detection (Test) [ASPECT#POLARITY]
+Macro Precision: 62.26%
+Macro Recall:    19.00%
+Macro F1:        24.89%

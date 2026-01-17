@@ -33,32 +33,42 @@ PROCESSED_DIR = ROOT / "data" / "processed"
 # ===========================
 # Dataset Selection
 # ===========================
+# ===========================
+# Dataset Selection
+# ===========================
 def choose_dataset() -> tuple[str, str, str]:
     """
     Interactive dataset selection with automatic path resolution.
     
     Returns:
-        tuple: (dataset_name, csv_file_path)
-        
-    Raises:
-        FileNotFoundError: If the selected dataset CSV cannot be located
+        tuple: (dataset_name, csv_file_path, topic)
     """
-    print("\nDatasets:\n  1) aware\n  2) spotify\n  3) google_play\n 4) UIT-ViSFD\n 5) UIT-ViSFD-All\n 6)TGDD Reviews")
-    choice = (input("Choose 1-6 [2]: ").strip() or "2")
-    ds_map = {"1": "aware", "2": "spotify", "3": "google_play", "4": "uit", "5": "uit_all", "6": "processed_tgdd_reviews"}
+    #1
+    print("\nDatasets:\n  1) UIT-ViSFD\n  2) TGDD Reviews") 
+
+    #2
+    choice = (input("Choose 1-2 [1]: ").strip() or "1")
+
+    # 3. Only 2 datasets 
+    ds_map = {
+        "1": "uit",
+        "2": "processed_tgdd_reviews",
+    }
+
+    #4
     topic_map = {
-        "1": "Đây là các reviews về đánh giá ứng dụng", 
-        "2": "Đây là các reviews về dịch vụ nghe nhạc trực tuyến Spotify", 
-        "3": "Đây là các reviews về ứng dụng trên cửa hàng Google Play", 
-        "4": "Đây là các reviews về điện thoại di động",
-        "5": "Đây là các reviews về các sản phẩm điện tử tiêu dùng",
-        "6": "Đây là các reviews về điện thoại di động của Thế Giới Di Động"
-        }
-    topic = topic_map.get(choice, "Đây là các reviews về sản phẩm điện thoại di động")
-    ds = ds_map.get(choice, "spotify")
+        "1": "Đây là các reviews về điện thoại di động (Dataset UIT-ViSFD)",
+        "2": "Đây là các reviews về điện thoại di động của Thế Giới Di Động",
+    }
+
+    ds = ds_map.get(choice, "uit")
+    topic = topic_map.get(choice, topic_map["1"])
+
     primary   = PROCESSED_DIR / f"{ds}_clean.csv"
     fallback1 = PROCESSED_DIR / f"{ds}_processed.csv"
     fallback2 = PROCESSED_DIR / f"{ds}.csv"
+
+    # Resolution logic
     if primary.exists():
         resolved = primary
     elif fallback1.exists():
@@ -68,24 +78,30 @@ def choose_dataset() -> tuple[str, str, str]:
         print(f"(note) Using fallback file: {fallback2.name}")
         resolved = fallback2
     else:
+        # search globally
         candidates = list(REPO_ROOT.glob(f"**/{ds}_clean.csv")) + \
                      list(REPO_ROOT.glob(f"**/{ds}_processed.csv"))
         if candidates:
-            candidates.sort(key=lambda p: ( "data\\processed" not in str(p).lower()
-                                            and "data/processed" not in str(p).lower(), len(str(p)) ))
+            candidates.sort(key=lambda p: (
+                "data\\processed" not in str(p).lower()
+                and "data/processed" not in str(p).lower(),
+                len(str(p))
+            ))
             resolved = candidates[0]
         else:
             existing = []
             if PROCESSED_DIR.exists():
                 existing = [p.name for p in PROCESSED_DIR.glob("*.csv")]
             raise FileNotFoundError(
-                "Could not locate the cleaned CSV for dataset '{ds}'.\n"
+                f"Could not locate the cleaned CSV for dataset '{ds}'.\n"
                 f"Tried: {primary} and {fallback1}\n"
                 f"data/processed listing: {existing}\n"
                 f"Repo root: {REPO_ROOT}"
             )
+
     print(f"Using dataset: {ds} → {resolved}")
     return ds, str(resolved), topic
+
 
 # ===========================
 # Sample Size Selection (Optional sampling - lấy mẫu ngẫu nhiên)

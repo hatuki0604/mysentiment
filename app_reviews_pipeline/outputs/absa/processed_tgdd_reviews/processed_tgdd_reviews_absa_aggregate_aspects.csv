@@ -1,0 +1,14 @@
+aspect,mentions,Positive,Negative,Neutral,positivity_pct
+battery,781,206,521,54,0.264
+camera,139,36,91,12,0.259
+design,155,94,54,7,0.606
+features,655,185,394,76,0.282
+general,1071,559,389,123,0.522
+microphone,1,0,1,0,0.0
+others,572,28,229,315,0.049
+performance,392,161,214,17,0.411
+price,190,87,83,20,0.458
+screen,206,71,110,25,0.345
+ser&acc,459,103,260,96,0.224
+sound,5,3,2,0,0.6
+storage,27,10,9,8,0.37

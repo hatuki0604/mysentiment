@@ -1,0 +1,19 @@
+{
+  "output_a_scores": {
+    "accuracy": 8,
+    "completeness": 6,
+    "conciseness": 9,
+    "format": 10,
+    "domain_relevance": 7
+  },
+  "output_b_scores": {
+    "accuracy": 8,
+    "completeness": 6,
+    "conciseness": 9,
+    "format": 10,
+    "domain_relevance": 7
+  },
+  "explanation": "C\u1ea3 hai \u0111\u1ea7u ra \u0111\u1ec1u gi\u1ed1ng nhau v\u1ec1 n\u1ed9i dung v\u00e0 c\u1ea5u tr\u00fac, kh\u00f4ng c\u00f3 s\u1ef1 kh\u00e1c bi\u1ec7t r\u00f5 r\u00e0ng v\u1ec1 \u0111\u1ed9 ch\u00ednh x\u00e1c hay t\u00ednh \u0111\u1ea7y \u0111\u1ee7.",
+  "recommendation": "a",
+  "confidence": 0.7
+}
